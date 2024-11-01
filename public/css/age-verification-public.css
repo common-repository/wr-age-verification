@@ -1,0 +1,50 @@
+/**
+ * All of the CSS for your public-facing functionality should be
+ * included in this file.
+*/
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {-webkit-appearance: none;margin: 0;}
+/* Firefox */
+input[type=number] {-moz-appearance: textfield;}
+
+.wr_verify_popup{position: fixed;left: 0;top: 0;height: 100%;z-index: 1000;width: 100%;background-color: rgba(0, 0, 0, 0.5);opacity: 1;visibility: visible;overflow-y: scroll;}
+.wr_verify_content {position: relative;width: 80%;margin: 0 auto;overflow: hidden;min-height: 100%;display: flex;align-items: center;justify-content: center;}
+.wr_verify_popup .wr_verify_row {display: flex;width:100%;flex-wrap: wrap;background-color: #fff;border-radius: 6px;box-shadow: 0 0 20px rgb(0 0 0 / 20%);overflow: hidden;text-align: center;}
+.wr_verify_popup .wr_verify_row .wr_left_column {flex: 0 0 45%;max-width: 45%;background-size: cover;background-repeat: no-repeat;background-position: center center;position: relative;display: flex;flex-direction: column;align-items: center;justify-content: center;}
+.wr_verify_image .wr_verify_row .wr_left_column {flex: 0 0 100%;max-width: 100%;}
+.wr_verify_popup .wr_verify_row .wr_left_column::before{position: absolute;content: '';top: 0;left: 0;right: 0;bottom: 0;height: 100%;width: 100%;background: rgba(0,0,0,0.7);}
+.wr_verify_popup .wr_verify_row .wr_left_column .wr_verify_logo {position: relative;z-index: 99;}
+.wr_verify_popup .wr_verify_row .wr_left_column .wr_verify_logo img{width: 100%;}
+.wr_verify_popup .wr_verify_row .wr_left_column .wr_verify_description {position: relative;z-index: 99;padding: 50px 30px;}
+.wr_verify_popup .wr_verify_row .wr_left_column .wr_verify_description p{font-size: 15px;color: #fff;line-height: 24px;font-weight: bold;}
+.wr_verify_popup .wr_verify_row .wr_right_column {flex: 0 0 55%;max-width: 55%;padding: 75px 70px;position: relative;display: flex;justify-content: center;flex-direction: column;}
+.wr_center_content .wr_verify_row .wr_right_column {flex: 0 0 100%;max-width: 100%;}
+.wr_verify_popup .wr_verify_row .wr_right_column .wr_days_row {display: flex;align-items: baseline;margin: 30px -15px 20px;}
+.wr_verify_popup .wr_verify_row .wr_right_column .wr_days_row .wr_days_col {flex: 0 0 33%;max-width: 33%;padding: 0 15px;}
+.wr_verify_popup .wr_verify_row .wr_right_column .form-control {width: 100% !important;padding: 6px 15px !important;border: 1px solid #ccc !important;border-radius: 4px !important;outline: 0 !important;color: #666;font-size: 16px !important;display: inline-block;}
+.wr_verify_popup .wr_verify_row .wr_right_column .form-control::placeholder{color: #666;font-size: 16px !important;}
+.wr_verify_popup .wr_verify_row .wr_right_column h5{font-size: 26px;text-transform: uppercase;font-weight: bold;}
+.wr_verify_popup .wr_verify_row .wr_right_column span {font-size: 15px;margin:6px 0;}
+.wr_verify_popup .wr_verify_row .wr_right_column .form_area input[type=number] {width: 100%;padding: 2px 15px;border: 1px solid #ccc;border-radius: 4px;outline: 0;}
+.wr_verify_popup .wr_verify_row .wr_right_column .form_area input[type=number]::placeholder {font-size: 18px;}
+.wr_verify_popup .wr_verify_row .wr_right_column .form_area .btn{border:  1px solid #555 !important;}
+.wr_verify_popup .wr_verify_row .wr_right_column button:focus{outline: none !important;}
+.wr_blue_button{background-color: #28303d !important;color: #b5c6c3 !important;width: 100%;font-size: 14px;font-weight: 500 !important;line-height: normal !important;padding: 3px 10px !important;border-radius: 4px !important;margin-bottom: 15px;}
+#wr_error{color: red;position: absolute;top: 10%;left: 0;right: 0;font-weight: bold;text-transform: capitalize;}
+.wrf_red_btn{padding: 5px 20px;background: red !important;color: #000;border: 0px;box-shadow: none;outline: none;margin-right: 10px;width: 100px;margin-bottom: 15px;margin-top: 15px;}
+.wrf_green_btn{padding: 4px 20px;background: green !important;color: #fff;border: 0px;box-shadow: none;outline: none;margin-left: 10px;width: 100px;margin-bottom: 15px;margin-top: 15px;}
+@media(max-width: 991px){
+    .wr_verify_content {width: 80% !important;}
+    .wr_verify_popup .wr_verify_row .wr_right_column{padding: 65px 30px;}
+    .wr_verify_popup .wr_verify_row .wr_right_column .wr_days_row{margin:30px -5px 20px;}
+    .wr_verify_popup .wr_verify_row .wr_right_column .wr_days_row .wr_days_col{padding: 0 5px;}
+}
+@media(max-width: 767px){
+    .wr_verify_popup .wr_verify_row .wr_left_column ,.wr_verify_popup .wr_verify_row .wr_right_column{flex: 0 0 100%;max-width: 100%;}
+    .wr_verify_popup .wr_verify_row .wr_right_column {padding: 35px 25px;}
+    .wr_verify_popup .wr_verify_row .wr_right_column h5{font-size: 22px;}
+    .wr_verify_popup .wr_verify_row .wr_right_column .form-control{font-size: 14px !important;padding: 6px 10px !important;}
+    .wr_verify_popup .wr_verify_row .wr_right_column .form-control::placeholder{font-size: 14px !important;}
+}
